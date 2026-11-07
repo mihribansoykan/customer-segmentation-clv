@@ -1,0 +1,11 @@
+segment,customers,revenue,median_recency,median_frequency,median_monetary,customer_share,revenue_share,action,mean_p_alive,revenue_last_12m,revenue_at_risk,pred_6m_revenue
+Champions,825,8550905.43,8.0,12.0,3881.11,0.1414,0.5226,"Reward, early access to new ranges, ask for referrals",0.9877,4502921.92,27968.9296,2534560.2874
+Loyal,1148,4546823.91,52.0,8.0,2428.88,0.1968,0.2779,"Upsell higher-value ranges, loyalty programme",0.9575,2197237.16,85935.7348,1205789.7504
+At Risk,755,959113.12,374.0,4.0,920.71,0.1294,0.0586,Personal win-back outreach before they churn,0.625,159529.9,35025.5705,159414.0167
+Potential Loyalists,712,626864.92,23.0,3.0,668.275,0.1221,0.0383,"Membership offer, personalised recommendations",0.9402,490909.23,29201.5768,656068.527
+Hibernating,1506,609515.44,432.0,1.0,268.275,0.2582,0.0373,Low-cost automated reactivation; suppress from expensive channels,0.9136,136859.42,12099.7363,88273.4749
+Can't Lose,72,478664.45,314.5,11.0,3396.985,0.0123,0.0293,"High-touch win-back (account manager call), survey why they left",0.2991,46489.09,29186.4194,20719.9532
+Need Attention,270,335337.42,105.0,3.0,918.15,0.0463,0.0205,Time-limited offers based on purchase history,0.9015,207984.79,17376.0407,88701.3773
+About to Sleep,381,201096.48,92.0,1.0,355.1,0.0653,0.0123,Reactivation campaign with popular products,0.9444,172511.72,11749.2915,83228.6013
+Promising,113,35277.54,37.0,1.0,223.85,0.0194,0.0022,"Brand awareness, free-shipping threshold nudges",1.0,35277.54,0.0,52234.9691
+New Customers,51,17971.42,10.0,1.0,246.3,0.0087,0.0011,"Onboarding journey, second-purchase incentive",1.0,17971.42,0.0,57260.9105

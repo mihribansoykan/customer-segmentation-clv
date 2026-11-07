@@ -1,0 +1,269 @@
+{
+  "cleaning": [
+    {
+      "step": "raw",
+      "rows": 1067371,
+      "removed": 0
+    },
+    {
+      "step": "drop missing customer_id",
+      "rows": 824364,
+      "removed": 243007
+    },
+    {
+      "step": "drop exact duplicates",
+      "rows": 797885,
+      "removed": 26479
+    },
+    {
+      "step": "keep product stock codes",
+      "rows": 794223,
+      "removed": 3662
+    },
+    {
+      "step": "drop non-positive prices",
+      "rows": 794163,
+      "removed": 60
+    },
+    {
+      "step": "drop non-return lines with quantity <= 0",
+      "rows": 794163,
+      "removed": 0
+    }
+  ],
+  "data": {
+    "transactions": 794163,
+    "invoices": 36594,
+    "customers": 5875,
+    "countries": 41,
+    "period": [
+      "2009-12-01",
+      "2011-12-09"
+    ],
+    "net_revenue": 16358614.54,
+    "return_value_share": 0.0416
+  },
+  "cohorts": {
+    "mean_month1_retention": 0.2099,
+    "mean_month3_retention": 0.2172
+  },
+  "rfm": {
+    "customers_segmented": 5833,
+    "champions_loyal_customer_share": 0.3382,
+    "champions_loyal_revenue_share": 0.8005,
+    "at_risk_cant_lose_customers": 827,
+    "at_risk_cant_lose_revenue_last_12m": 206018.99,
+    "at_risk_cant_lose_revenue_at_risk": 64211.99,
+    "btyd_params_full_history": {
+      "r": 0.27013282759948465,
+      "alpha": 8.913384079537494,
+      "a": 0.08665920820833935,
+      "b": 1.2533062925409815,
+      "p": 11.716431678926146,
+      "q": 0.8935664678722682,
+      "v": 11.69470086944067
+    }
+  },
+  "kmeans": {
+    "k": 4,
+    "k_scores": [
+      {
+        "k": 2,
+        "inertia": 17073.0828,
+        "silhouette": 0.3535,
+        "davies_bouldin": 1.0736
+      },
+      {
+        "k": 3,
+        "inertia": 13595.642,
+        "silhouette": 0.2662,
+        "davies_bouldin": 1.2451
+      },
+      {
+        "k": 4,
+        "inertia": 11778.6848,
+        "silhouette": 0.241,
+        "davies_bouldin": 1.3059
+      },
+      {
+        "k": 5,
+        "inertia": 10500.9344,
+        "silhouette": 0.2352,
+        "davies_bouldin": 1.2742
+      },
+      {
+        "k": 6,
+        "inertia": 9556.7808,
+        "silhouette": 0.2303,
+        "davies_bouldin": 1.2554
+      },
+      {
+        "k": 7,
+        "inertia": 8806.9841,
+        "silhouette": 0.2187,
+        "davies_bouldin": 1.2589
+      },
+      {
+        "k": 8,
+        "inertia": 8237.9335,
+        "silhouette": 0.2208,
+        "davies_bouldin": 1.2395
+      }
+    ],
+    "clusters": [
+      {
+        "name": "High-value active",
+        "customers": 1188,
+        "customer_share": 0.2037,
+        "revenue_share": 0.7556
+      },
+      {
+        "name": "Mid-value active",
+        "customers": 1602,
+        "customer_share": 0.2746,
+        "revenue_share": 0.1226
+      },
+      {
+        "name": "Mid-value lapsed",
+        "customers": 1583,
+        "customer_share": 0.2714,
+        "revenue_share": 0.1027
+      },
+      {
+        "name": "Low-value lapsed",
+        "customers": 1460,
+        "customer_share": 0.2503,
+        "revenue_share": 0.0191
+      }
+    ],
+    "crosstab_rfm_vs_cluster": {
+      "High-value active": {
+        "About to Sleep": 0,
+        "At Risk": 18,
+        "Can't Lose": 43,
+        "Champions": 583,
+        "Hibernating": 0,
+        "Loyal": 518,
+        "Need Attention": 4,
+        "New Customers": 0,
+        "Potential Loyalists": 22,
+        "Promising": 0
+      },
+      "Low-value lapsed": {
+        "About to Sleep": 173,
+        "At Risk": 166,
+        "Can't Lose": 1,
+        "Champions": 1,
+        "Hibernating": 850,
+        "Loyal": 26,
+        "Need Attention": 50,
+        "New Customers": 20,
+        "Potential Loyalists": 109,
+        "Promising": 64
+      },
+      "Mid-value active": {
+        "About to Sleep": 8,
+        "At Risk": 83,
+        "Can't Lose": 25,
+        "Champions": 240,
+        "Hibernating": 0,
+        "Loyal": 576,
+        "Need Attention": 103,
+        "New Customers": 29,
+        "Potential Loyalists": 532,
+        "Promising": 6
+      },
+      "Mid-value lapsed": {
+        "About to Sleep": 200,
+        "At Risk": 488,
+        "Can't Lose": 3,
+        "Champions": 1,
+        "Hibernating": 656,
+        "Loyal": 28,
+        "Need Attention": 113,
+        "New Customers": 2,
+        "Potential Loyalists": 49,
+        "Promising": 43
+      }
+    }
+  },
+  "clv": {
+    "horizon_days": 182,
+    "train": {
+      "cutoffs": [
+        "2010-06-09",
+        "2010-07-09",
+        "2010-08-09",
+        "2010-09-09",
+        "2010-10-09",
+        "2010-11-09",
+        "2010-12-09"
+      ],
+      "rows": 20737,
+      "share_with_future_purchase": 0.6457
+    },
+    "test": {
+      "cutoff": "2011-06-09",
+      "customers": 2625,
+      "share_with_future_purchase": 0.7013,
+      "actual_revenue": 3763107.02
+    },
+    "results": {
+      "Naive (last 6 months)": {
+        "mae": 895.5198,
+        "rmse": 4109.7776,
+        "spearman": 0.6002,
+        "top20_capture": 0.6954,
+        "top20_capture_vs_oracle": 0.8845,
+        "total_bias": -0.1702
+      },
+      "BG/NBD + Gamma-Gamma": {
+        "mae": 805.3853,
+        "rmse": 2949.9429,
+        "spearman": 0.6455,
+        "top20_capture": 0.71,
+        "top20_capture_vs_oracle": 0.9032,
+        "total_bias": -0.0791
+      },
+      "LightGBM (behavioural)": {
+        "mae": 865.6826,
+        "rmse": 3978.9825,
+        "spearman": 0.6006,
+        "top20_capture": 0.6977,
+        "top20_capture_vs_oracle": 0.8874,
+        "total_bias": -0.1887
+      },
+      "LightGBM + BTYD features": {
+        "mae": 839.3176,
+        "rmse": 3787.8837,
+        "spearman": 0.6447,
+        "top20_capture": 0.7113,
+        "top20_capture_vs_oracle": 0.9048,
+        "total_bias": -0.1236
+      }
+    },
+    "btyd_params_holdout": {
+      "bgnbd": {
+        "r": 0.2600255039332818,
+        "alpha": 8.707085102508234,
+        "a": 0.12288126887315029,
+        "b": 1.35955719661107
+      },
+      "gamma_gamma": {
+        "p": 11.782988976293625,
+        "q": 0.8905788530014929,
+        "v": 11.714905043316284
+      }
+    },
+    "top_features": {
+      "revenue": 0.46,
+      "q4_share": 0.29,
+      "btyd_pred": 0.18,
+      "btyd_purchases": 0.1,
+      "avg_basket": 0.06,
+      "btyd_value": 0.05,
+      "p_alive": 0.05,
+      "mean_gap_days": 0.04
+    }
+  }
+}

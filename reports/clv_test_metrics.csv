@@ -1,0 +1,5 @@
+,mae,rmse,spearman,top20_capture,top20_capture_vs_oracle,total_bias
+Naive (last 6 months),895.5198,4109.7776,0.6002,0.6954,0.8845,-0.1702
+BG/NBD + Gamma-Gamma,805.3853,2949.9429,0.6455,0.71,0.9032,-0.0791
+LightGBM (behavioural),865.6826,3978.9825,0.6006,0.6977,0.8874,-0.1887
+LightGBM + BTYD features,839.3176,3787.8837,0.6447,0.7113,0.9048,-0.1236
